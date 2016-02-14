@@ -1,13 +1,26 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>GhostWriter</title>
+		<title>NinjaWriter</title>
+		<script src='jquery.js'></script>
 	</head>
 	<body>
 	
 		<div id="content">
-		
+			<p id="text">
+			</p>
 		
 		</div>
+
+		<script>
+			var essayText = 'hey dit werkt best goed';
+			var wordArray = essayText.split(" ");
+			wordArray.reverse();
+
+			$('#text').append(wordArray.pop() + " ");
+			$('#content').keydown(function() {
+				alert('hi');
+			});
+		</script>
 	</body>
 </html>
